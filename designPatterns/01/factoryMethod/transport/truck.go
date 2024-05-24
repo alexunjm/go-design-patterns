@@ -2,13 +2,13 @@ package transport
 
 import "fmt"
 
-type Truck struct{}
+type truck struct{}
 
 // Deliver implements Transport.
-func (*Truck) Deliver() {
+func (*truck) Deliver() {
 	fmt.Println("Delivering with Truck")
 }
 
 func NewTruck() Transport {
-	return &Truck{}
+	return &truck{}
 }

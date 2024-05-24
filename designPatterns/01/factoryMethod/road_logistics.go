@@ -2,14 +2,14 @@ package factorymethod
 
 import "github.com/alexunjm/go-design-patterns/designPatterns/01/factoryMethod/transport"
 
-type RoadLogistics struct {
+type roadLogistics struct {
 }
 
 // CreateTransport implements Logistics.
-func (*RoadLogistics) CreateTransport() transport.Transport {
+func (*roadLogistics) CreateTransport() transport.Transport {
 	return transport.NewTruck()
 }
 
 func NewRoadLogistics() Logistics {
-	return &RoadLogistics{}
+	return &roadLogistics{}
 }
